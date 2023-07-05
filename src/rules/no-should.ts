@@ -53,8 +53,6 @@ export default createRule<
     { ignore: [], allowedPrefixes: [], ignoreTopLevelDescribe: false },
   ],
   create(context) {
-    console.log('no-should.ts');
-
     return {
       CallExpression(node: TSESTree.CallExpression) {
         const jestFnCall = parseJestFnCall(node, context);
